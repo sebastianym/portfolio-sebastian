@@ -37,13 +37,13 @@ export function Loader({ onComplete }: { onComplete: () => void }) {
       }`}
     >
       {/* Animated GIF */}
-      <div className="relative mb-8">
+      <div className="relative mb-2">
         <Image
           src="https://i.pinimg.com/originals/66/11/f9/6611f91e4bff4c3c902fec3aafe87f41.gif"
           alt="Loading animation"
           width={120}
           height={120}
-          className="rounded-lg"
+          className="rounded-lg ml-4"
           unoptimized
           priority
         />

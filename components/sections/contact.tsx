@@ -40,9 +40,8 @@ export function ContactSection() {
         </div>
 
         <p className={`text-muted-foreground text-lg max-w-xl mx-auto mb-12 leading-relaxed transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-          I&apos;m currently open to new opportunities in AI and machine learning. 
-          Whether you have a question, want to discuss a project, or just want to 
-          connect, feel free to reach out!
+          I&apos;m currently open to new opportunities and collaborations.
+          Whether you have a question, want to discuss a project, or simply want to connect, feel free to reach out.
         </p>
 
         <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -64,18 +63,18 @@ export function ContactSection() {
           <div className="p-6 rounded-lg bg-card border border-border text-center">
             <Mail className="h-6 w-6 text-primary mb-3 mx-auto" />
             <h3 className="text-sm font-medium text-foreground mb-1">Email</h3>
-            <a 
-              href="mailto:hello@example.com" 
+            <a
+              href="mailto:hello@example.com"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
-              hello@example.com
+              syepesm05@gmail.com
             </a>
           </div>
           <div className="p-6 rounded-lg bg-card border border-border text-center">
             <MapPin className="h-6 w-6 text-primary mb-3 mx-auto" />
             <h3 className="text-sm font-medium text-foreground mb-1">Location</h3>
             <p className="text-sm text-muted-foreground">
-              Remote / Worldwide
+              Bogotá, Colombia (Remote / Worldwide)
             </p>
           </div>
         </div>

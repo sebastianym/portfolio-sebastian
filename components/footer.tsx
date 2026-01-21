@@ -1,11 +1,12 @@
 "use client"
 
-import { Github, Linkedin, Mail } from "lucide-react"
+import { Github, Mail } from "lucide-react"
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/sebastianym", label: "GitHub" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/sebastianyepesmarta/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:syepesm05@gmail.com", label: "Email" },
 ]
 
 export function Footer() {
@@ -34,7 +35,7 @@ export function Footer() {
           {/* Credits */}
           <div className="text-center">
             <p className="text-xs text-muted-foreground">
-              &copy; {currentYear} - hello@example.com
+              &copy; {currentYear} - syepesm05@gmail.com
             </p>
           </div>
         </div>

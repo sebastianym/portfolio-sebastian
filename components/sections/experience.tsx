@@ -53,18 +53,23 @@ const experiences: ExperienceItem[] = [
 
 const education = [
   {
-    degree: "Computer Science",
-    institution: "University of Technology",
-    period: "2016 - 2020",
-    description: "Specialized in machine learning and artificial intelligence. Completed thesis on neural network optimization techniques.",
+    degree: "Bachelor’s Degree in Systems Engineering (awaiting graduation ceremony)",
+    institution: "Universidad Distrital Francisco José de Caldas",
+    period: "2021 - 2025",
+    description:
+      "Strong foundation in software engineering, data systems, and distributed architectures. Honors: Monitor of the Systems Engineering Curriculum Project, supporting academic and technical initiatives.",
+    location: "Bogotá, Colombia",
   },
   {
-    degree: "Deep Learning Specialization",
-    institution: "Online Academy",
-    period: "2021",
-    description: "Comprehensive course covering CNNs, RNNs, transformers, and modern deep learning architectures.",
+    degree: "AWS Academy Cloud Foundations",
+    institution: "Amazon Web Services (AWS)",
+    period: "2024",
+    description:
+      "Hands-on training in cloud computing fundamentals, including AWS core services, security best practices, scalable architectures, and deployment patterns used in production environments.",
+    location: "Bogotá, Colombia",
   },
-]
+];
+
 
 export function ExperienceSection() {
   const sectionRef = useRef<HTMLElement>(null)

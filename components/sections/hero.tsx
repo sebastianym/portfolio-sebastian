@@ -31,20 +31,20 @@ export function HeroSection() {
         {/* Main Heading */}
         <h1 className="mb-6 animate-fade-in-up animation-delay-100">
           <span className="block text-lg sm:text-xl font-light text-muted-foreground mb-2">
-            Hello, I&apos;m
+            Hello, I&apos;m Sebastián Yepes
           </span>
           <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-            An AI
+            {"<"}An AI
           </span>
           <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary">
-            Engineer
+            Engineer {"/>"}
           </span>
         </h1>
 
         {/* Subtitle */}
         <p className="mx-auto mb-10 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in-up animation-delay-200 text-balance">
-          Specializing in machine learning, large language models, and building 
-          intelligent systems. Passionate about creating AI-powered solutions 
+          Specializing in machine learning, large language models, and building
+          intelligent systems. Passionate about creating AI-powered solutions
           that solve real-world problems.
         </p>
 
@@ -60,7 +60,7 @@ export function HeroSection() {
           <Button
             variant="outline"
             size="lg"
-            className="border-border hover:bg-secondary hover:border-border/80 px-8 bg-transparent"
+            className="border-border hover:bg-secondary hover:border-border/80 px-8 bg-transparent hover:text-white"
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
           >
             Get in Touch

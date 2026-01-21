@@ -8,23 +8,48 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  { name: "Python", category: "Languages" },
-  { name: "JavaScript", category: "Languages" },
-  { name: "TypeScript", category: "Languages" },
+  // AI / ML
+  { name: "LLMs & Prompt Engineering", category: "ML/AI" },
+  { name: "LangChain / ADK", category: "ML/AI" },
+  { name: "OpenAI API", category: "ML/AI" },
+  { name: "Hugging Face", category: "ML/AI" },
   { name: "PyTorch", category: "ML/AI" },
   { name: "TensorFlow", category: "ML/AI" },
-  { name: "LangChain", category: "ML/AI" },
-  { name: "Hugging Face", category: "ML/AI" },
-  { name: "OpenAI API", category: "ML/AI" },
-  { name: "React", category: "Frontend" },
-  { name: "Next.js", category: "Frontend" },
-  { name: "Node.js", category: "Backend" },
+  { name: "RAG", category: "ML/AI" },
+  { name: "Vector Stores", category: "ML/AI" },
+
+  // Backend & APIs
+  { name: "Python", category: "Backend" },
+  { name: "TypeScript", category: "Backend" },
   { name: "FastAPI", category: "Backend" },
+  { name: "Node.js", category: "Backend" },
+  { name: "REST APIs", category: "Backend" },
+
+  // Databases & Data Systems
   { name: "PostgreSQL", category: "Database" },
+  { name: "Snowflake", category: "Database" },
+  { name: "ClickHouse", category: "Database" },
+
+  // Cloud & Infrastructure
+  { name: "AWS (S3, Lambda, RDS, EKS, KMS)", category: "Cloud" },
   { name: "Docker", category: "DevOps" },
-  { name: "AWS", category: "Cloud" },
-  { name: "Git", category: "Tools" },
-]
+  { name: "Kubernetes (EKS)", category: "DevOps" },
+  { name: "CI/CD (GitHub Actions)", category: "DevOps" },
+  { name: "Git", category: "DevOps" },
+
+
+  // MLOps & Data Engineering
+  { name: "Apache Airflow", category: "MLOps / Data" },
+  { name: "MLflow / Weights & Biases", category: "MLOps / Data" },
+  { name: "Langfuse", category: "MLOps / Data" },
+  { name: "n8n", category: "MLOps / Data" },
+
+  // Observability
+  { name: "Datadog", category: "Observability" },
+  { name: "Prometheus", category: "Observability" },
+  { name: "Grafana", category: "Observability" },
+];
+
 
 export function SkillsSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -49,8 +74,8 @@ export function SkillsSection() {
     return () => observer.disconnect()
   }, [])
 
-  const filteredSkills = activeCategory === "All" 
-    ? skills 
+  const filteredSkills = activeCategory === "All"
+    ? skills
     : skills.filter(skill => skill.category === activeCategory)
 
   const usedCategories = ["All", ...new Set(skills.map(s => s.category))]
@@ -77,11 +102,10 @@ export function SkillsSection() {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-200 ${
-                activeCategory === category
+              className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-200 ${activeCategory === category
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -111,9 +135,9 @@ export function SkillsSection() {
         {/* Stats */}
         <div className={`mt-16 grid sm:grid-cols-3 gap-6 transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           {[
-            { label: "Years of Experience", value: "4+" },
-            { label: "Projects Completed", value: "30+" },
-            { label: "ML Models Deployed", value: "15+" },
+            { label: "Years of Experience", value: "2+" },
+            { label: "Projects Completed", value: "10+" },
+            { label: "ML Models Deployed", value: "12+" },
           ].map((stat) => (
             <div
               key={stat.label}

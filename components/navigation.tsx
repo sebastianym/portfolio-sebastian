@@ -1,20 +1,21 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
+import { Menu, X, Github, Mail } from "lucide-react"
+import { FaLinkedinIn } from "react-icons/fa6";
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "About", href: "#about" },
+  { label: "About me", href: "#about" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ]
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: Github, href: "https://github.com/sebastianym", label: "GitHub" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/sebastianyepesmarta/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:syepesm05@gmail.com", label: "Email" },
 ]
 
 export function Navigation() {
@@ -58,22 +59,6 @@ export function Navigation() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        {/* Logo - Left */}
-        <a
-          href="#"
-          className="group flex items-center gap-2"
-          onClick={(e) => {
-            e.preventDefault()
-            window.scrollTo({ top: 0, behavior: "smooth" })
-          }}
-        >
-          <span className="text-lg font-bold text-foreground">
-            {"<"}
-            <span className="text-primary">Dev</span>
-            {"/>"}
-          </span>
-        </a>
-
         {/* Desktop Navigation - Center */}
         <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
@@ -111,7 +96,7 @@ export function Navigation() {
           <Button
             variant="outline"
             size="sm"
-            className="ml-2 border-primary/50 text-primary hover:bg-primary/10 hover:border-primary bg-transparent"
+            className="ml-2 border-primary/50 text-primary hover:bg-primary/10 hover:border-primary bg-transparent hover:text-white"
           >
             Resume
           </Button>

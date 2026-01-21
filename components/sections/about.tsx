@@ -58,19 +58,15 @@ export function AboutSection() {
           {/* Content */}
           <div className={`lg:col-span-3 space-y-5 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m an AI Engineer with a strong background in machine learning and 
-              software development. I specialize in building intelligent systems, 
-              from natural language processing to computer vision applications.
+              I&apos;m an AI Engineer focused on designing and shipping production-grade LLM agents and data-driven systems for financial operations.
             </p>
+
             <p className="text-muted-foreground leading-relaxed">
-              My expertise includes developing and deploying large language models, 
-              creating RAG systems, and building end-to-end ML pipelines. I&apos;m passionate 
-              about making AI accessible and useful for real-world applications.
+              I build end-to-end solutions — data ingestion, RAG retrieval, model serving and background pipelines — prioritizing observability, safety and measurable impact.
             </p>
+
             <p className="text-muted-foreground leading-relaxed">
-              When I&apos;m not training models or optimizing inference pipelines, you&apos;ll 
-              find me exploring the latest research papers, contributing to open source 
-              AI projects, or experimenting with new architectures.
+              I collaborate with product and operations to validate use cases and deliver reproducible services (FastAPI, Docker, CI/CD) that scale to production.
             </p>
 
             {/* Skills List */}
@@ -78,14 +74,15 @@ export function AboutSection() {
               <p className="text-sm font-medium text-foreground mb-4">
                 Technologies I work with:
               </p>
+
               <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
                 {[
                   "Python",
-                  "PyTorch",
-                  "TensorFlow",
-                  "LangChain",
+                  "FastAPI",
+                  "LangChain / ADK",
                   "OpenAI API",
-                  "Hugging Face",
+                  "Snowflake",
+                  "AWS (S3, Lambda, EKS)",
                 ].map((skill) => (
                   <li
                     key={skill}
