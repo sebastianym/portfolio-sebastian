@@ -42,7 +42,7 @@ export function AboutSection() {
           {/* Image - Smaller */}
           <div className={`lg:col-span-2 flex justify-center transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <div className="relative group">
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-lg overflow-hidden bg-secondary">
+              <div className="relative w-48 h-48 sm:w-72 sm:h-72 rounded-lg overflow-hidden bg-secondary">
                 <Image
                   src="https://avatars.githubusercontent.com/u/125759356?v=4"
                   alt="Sebastián Yepes"
@@ -58,15 +58,13 @@ export function AboutSection() {
           {/* Content */}
           <div className={`lg:col-span-3 space-y-5 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m an AI Engineer focused on designing and shipping production-grade LLM agents and data-driven systems for financial operations.
+              I&apos;m an AI Engineer with 2 years of experience, combining a strong foundation in software engineering with cloud-native architectures to build and deploy LLM-powered systems in real production environments. My work focuses on designing scalable AI solutions such as RAG pipelines, agent-based architectures, and asynchronous AI workflows that integrate seamlessly with existing platforms.
             </p>
-
             <p className="text-muted-foreground leading-relaxed">
-              I build end-to-end solutions — data ingestion, RAG retrieval, model serving and background pipelines — prioritizing observability, safety and measurable impact.
+              I primarily work with FastAPI-based backends and AWS services including S3, Lambda, RDS, KMS, and EKS, using orchestration tools like Airflow to manage background tasks and data flows. I have hands-on experience with vector stores, NLP workflows, prompt engineering, and LLM frameworks such as LangChain and OpenAI SDKs, along with monitoring and evaluation using Langfuse and observability stacks.
             </p>
-
             <p className="text-muted-foreground leading-relaxed">
-              I collaborate with product and operations to validate use cases and deliver reproducible services (FastAPI, Docker, CI/CD) that scale to production.
+              Beyond the technical side, I value clean architecture, reliability, and maintainability in AI systems. I collaborate closely with product and engineering teams, communicate ideas clearly, and approach problems with a pragmatic, solution-oriented mindset. I enjoy taking AI features from concept to production, ensuring they are not only intelligent, but also stable, observable, and ready to scale.
             </p>
 
             {/* Skills List */}

@@ -6,7 +6,6 @@ import { ExternalLink } from "lucide-react"
 interface ExperienceItem {
   title: string
   company: string
-  companyUrl?: string
   period: string
   description: string[]
   technologies: string[]
@@ -14,50 +13,32 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    title: "Senior AI Engineer",
-    company: "Tech Company",
-    companyUrl: "#",
-    period: "2023 - Present",
+    title: "AI Engineer",
+    company: "Construimos AG",
+    period: "2025 - Present",
     description: [
-      "Lead development of LLM-powered applications serving thousands of users daily.",
-      "Designed and implemented RAG systems improving information retrieval accuracy by 40%.",
-      "Collaborate with cross-functional teams to integrate AI solutions into existing products.",
+      "Focused on designing and deploying LLM-powered systems in production, including RAG pipelines, AI agents, and asynchronous AI workflows. Worked with AWS-based architectures, FastAPI backends, vector stores, and observability tools to build scalable and reliable AI solutions.",
     ],
-    technologies: ["Python", "PyTorch", "LangChain", "OpenAI", "AWS"],
+    technologies: ["LLMs", "RAG", "FastAPI", "AWS (EKS, S3, Lambda)", "Langfuse"],
   },
   {
     title: "Machine Learning Engineer",
-    company: "AI Startup",
-    companyUrl: "#",
-    period: "2021 - 2023",
+    company: "Freelance",
+    period: "2024 - 2025",
     description: [
-      "Developed computer vision models for automated quality inspection systems.",
-      "Built scalable ML pipelines processing millions of data points daily.",
-      "Optimized model inference reducing latency by 60% while maintaining accuracy.",
+      "Collaborated with startups and small teams to build early-stage AI features and automations. Implemented prompt-based workflows, basic RAG setups, and backend integrations using APIs, webhooks, and background task processing.",
     ],
-    technologies: ["TensorFlow", "Python", "Docker", "Kubernetes", "GCP"],
-  },
-  {
-    title: "Data Scientist",
-    company: "Analytics Corp",
-    companyUrl: "#",
-    period: "2020 - 2021",
-    description: [
-      "Created predictive models for customer behavior analysis.",
-      "Implemented automated reporting systems using Python and SQL.",
-      "Collaborated with stakeholders to translate business requirements into technical solutions.",
-    ],
-    technologies: ["Python", "SQL", "Scikit-learn", "Pandas", "Tableau"],
+    technologies: ["Prompt Engineering", "Vector Stores", "NLP", "Webhooks", "OpenAI SDK"],
   },
 ]
 
 const education = [
   {
-    degree: "Bachelor’s Degree in Systems Engineering (awaiting graduation ceremony)",
+    degree: "Bachelor’s Degree in Systems Engineering",
     institution: "Universidad Distrital Francisco José de Caldas",
     period: "2021 - 2025",
     description:
-      "Strong foundation in software engineering, data systems, and distributed architectures. Honors: Monitor of the Systems Engineering Curriculum Project, supporting academic and technical initiatives.",
+      "Built a strong foundation in software engineering, algorithms, data structures, and system design, with a focus on designing scalable and reliable systems. Developed analytical thinking and problem-solving skills applicable to AI system design, cloud architectures, and production-grade machine learning and LLM-based solutions.",
     location: "Bogotá, Colombia",
   },
   {
@@ -65,7 +46,15 @@ const education = [
     institution: "Amazon Web Services (AWS)",
     period: "2024",
     description:
-      "Hands-on training in cloud computing fundamentals, including AWS core services, security best practices, scalable architectures, and deployment patterns used in production environments.",
+      "Gained hands-on experience with core AWS services and cloud-native concepts, including compute, storage, networking, security, and scalability. Developed a solid understanding of deploying and operating AI-driven systems on cloud infrastructure, with emphasis on reliability, security, and production readiness.",
+    location: "Bogotá, Colombia",
+  },
+  {
+    degree: "Complete Web Development Course",
+    institution: "Udemy",
+    period: "2023",
+    description:
+      "Learned end-to-end web application development using modern frontend and backend technologies. Built a strong foundation in software development practices, APIs, and system integration, which supports the implementation and deployment.",
     location: "Bogotá, Colombia",
   },
 ];
@@ -111,21 +100,19 @@ export function ExperienceSection() {
         <div className={`flex justify-center gap-2 mb-12 transition-all duration-700 delay-100 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <button
             onClick={() => setActiveTab("work")}
-            className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-              activeTab === "work"
-                ? "bg-primary/10 text-primary border border-primary/30"
-                : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-            }`}
+            className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${activeTab === "work"
+              ? "bg-primary/10 text-primary border border-primary/30"
+              : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
           >
             Work Experience
           </button>
           <button
             onClick={() => setActiveTab("education")}
-            className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-              activeTab === "education"
-                ? "bg-primary/10 text-primary border border-primary/30"
-                : "text-muted-foreground hover:text-foreground hover:bg-secondary"
-            }`}
+            className={`px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${activeTab === "education"
+              ? "bg-primary/10 text-primary border border-primary/30"
+              : "text-muted-foreground hover:text-foreground hover:bg-secondary"
+              }`}
           >
             Education
           </button>
@@ -150,15 +137,12 @@ export function ExperienceSection() {
                     <h3 className="text-lg font-semibold text-foreground mb-1 flex items-center gap-2 flex-wrap">
                       {exp.title}
                       <span className="text-primary">@</span>
-                      <a
-                        href={exp.companyUrl}
+                      <span
                         className="text-primary hover:underline inline-flex items-center gap-1 group/link"
-                        target="_blank"
                         rel="noopener noreferrer"
                       >
                         {exp.company}
-                        <ExternalLink className="h-3 w-3 transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-                      </a>
+                      </span>
                     </h3>
                     <ul className="mt-4 space-y-2">
                       {exp.description.map((desc) => (

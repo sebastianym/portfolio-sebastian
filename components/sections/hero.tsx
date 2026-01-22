@@ -9,7 +9,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-10">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-32 h-96 w-96 rounded-full bg-primary/5 blur-3xl animate-fade-in" />
@@ -43,9 +43,8 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <p className="mx-auto mb-10 max-w-2xl text-base sm:text-lg text-muted-foreground leading-relaxed animate-fade-in-up animation-delay-200 text-balance">
-          Specializing in machine learning, large language models, and building
-          intelligent systems. Passionate about creating AI-powered solutions
-          that solve real-world problems.
+          Focused on LLMs and production-ready intelligent systems.
+          Building RAG pipelines, agent architectures, and scalable AI workflows on cloud-native infrastructure.
         </p>
 
         {/* CTA Buttons */}
@@ -66,16 +65,6 @@ export function HeroSection() {
             Get in Touch
           </Button>
         </div>
-
-        {/* Scroll Indicator */}
-        <button
-          onClick={scrollToAbout}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground transition-colors hover:text-foreground animate-fade-in animation-delay-500"
-          aria-label="Scroll to about section"
-        >
-          <span className="text-xs font-medium uppercase tracking-widest">Scroll</span>
-          <ArrowDown className="h-4 w-4 animate-bounce" />
-        </button>
       </div>
     </section>
   )

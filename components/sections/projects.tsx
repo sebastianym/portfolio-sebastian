@@ -120,8 +120,7 @@ export function ProjectsSection() {
           <h2 className="text-2xl sm:text-3xl font-bold text-foreground">Featured Projects</h2>
           <div className="mt-4 h-px w-16 bg-primary mx-auto" />
           <p className="text-muted-foreground max-w-2xl mx-auto mt-6">
-            A selection of AI and machine learning projects I&apos;ve built. Each project represents
-            a unique challenge solved with intelligent solutions.
+            A selection of projects I’ve built around LLM-based systems, including RAG pipelines, AI agents, and production-ready AI workflows.
           </p>
         </div>
 

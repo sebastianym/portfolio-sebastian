@@ -41,8 +41,8 @@ export function Loader({ onComplete }: { onComplete: () => void }) {
         <Image
           src="https://i.pinimg.com/originals/66/11/f9/6611f91e4bff4c3c902fec3aafe87f41.gif"
           alt="Loading animation"
-          width={120}
-          height={120}
+          width={80}
+          height={80}
           className="rounded-lg ml-4"
           unoptimized
           priority

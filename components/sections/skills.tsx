@@ -8,47 +8,36 @@ interface Skill {
 }
 
 const skills: Skill[] = [
-  // AI / ML
-  { name: "LLMs & Prompt Engineering", category: "ML/AI" },
-  { name: "LangChain / ADK", category: "ML/AI" },
-  { name: "OpenAI API", category: "ML/AI" },
-  { name: "Hugging Face", category: "ML/AI" },
-  { name: "PyTorch", category: "ML/AI" },
-  { name: "TensorFlow", category: "ML/AI" },
-  { name: "RAG", category: "ML/AI" },
-  { name: "Vector Stores", category: "ML/AI" },
+  // AI & LLM Systems
+  { name: "LLMs & Prompt Engineering", category: "AI / LLMs" },
+  { name: "RAG Systems", category: "AI / LLMs" },
+  { name: "AI Agents", category: "AI / LLMs" },
+  { name: "Vector Stores", category: "AI / LLMs" },
+  { name: "LangChain / OpenAI SDK", category: "AI / LLMs" },
 
   // Backend & APIs
   { name: "Python", category: "Backend" },
-  { name: "TypeScript", category: "Backend" },
   { name: "FastAPI", category: "Backend" },
-  { name: "Node.js", category: "Backend" },
   { name: "REST APIs", category: "Backend" },
+  { name: "Async & Background Tasks", category: "Backend" },
 
-  // Databases & Data Systems
-  { name: "PostgreSQL", category: "Database" },
-  { name: "Snowflake", category: "Database" },
-  { name: "ClickHouse", category: "Database" },
+  // Data & Storage
+  { name: "PostgreSQL", category: "Data" },
+  { name: "Snowflake", category: "Data" },
+  { name: "Object Storage (S3)", category: "Data" },
 
-  // Cloud & Infrastructure
-  { name: "AWS (S3, Lambda, RDS, EKS, KMS)", category: "Cloud" },
-  { name: "Docker", category: "DevOps" },
-  { name: "Kubernetes (EKS)", category: "DevOps" },
-  { name: "CI/CD (GitHub Actions)", category: "DevOps" },
-  { name: "Git", category: "DevOps" },
-
-
-  // MLOps & Data Engineering
-  { name: "Apache Airflow", category: "MLOps / Data" },
-  { name: "MLflow / Weights & Biases", category: "MLOps / Data" },
-  { name: "Langfuse", category: "MLOps / Data" },
-  { name: "n8n", category: "MLOps / Data" },
+  // Cloud & MLOps
+  { name: "AWS (Lambda, RDS, EKS, KMS)", category: "Cloud / MLOps" },
+  { name: "Apache Airflow", category: "Cloud / MLOps" },
+  { name: "Docker & Kubernetes", category: "Cloud / MLOps" },
+  { name: "CI/CD (GitHub Actions)", category: "Cloud / MLOps" },
 
   // Observability
+  { name: "Langfuse", category: "Observability" },
+  { name: "Prometheus & Grafana", category: "Observability" },
   { name: "Datadog", category: "Observability" },
-  { name: "Prometheus", category: "Observability" },
-  { name: "Grafana", category: "Observability" },
 ];
+
 
 
 export function SkillsSection() {
@@ -137,7 +126,7 @@ export function SkillsSection() {
           {[
             { label: "Years of Experience", value: "2+" },
             { label: "Projects Completed", value: "10+" },
-            { label: "ML Models Deployed", value: "12+" },
+            { label: "LLM Systems Deployed", value: "5+" },
           ].map((stat) => (
             <div
               key={stat.label}
