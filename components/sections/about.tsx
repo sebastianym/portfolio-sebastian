@@ -58,13 +58,13 @@ export function AboutSection() {
           {/* Content */}
           <div className={`lg:col-span-3 space-y-5 transition-all duration-700 delay-200 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;m an AI Engineer with 2 years of experience, combining a strong foundation in software engineering with cloud-native architectures to build and deploy LLM-powered systems in real production environments. My work focuses on designing scalable AI solutions such as RAG pipelines, agent-based architectures, and asynchronous AI workflows that integrate seamlessly with existing platforms.
+              I&apos;m an AI Engineer with 2 years of experience, combining a strong foundation in software engineering with cloud-native architectures to build and deploy LLM-powered systems in real production environments.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              I primarily work with FastAPI-based backends and AWS services including S3, Lambda, RDS, KMS, and EKS, using orchestration tools like Airflow to manage background tasks and data flows. I have hands-on experience with vector stores, NLP workflows, prompt engineering, and LLM frameworks such as LangChain and OpenAI SDKs, along with monitoring and evaluation using Langfuse and observability stacks.
+              My work focuses on designing scalable AI solutions such as RAG pipelines, agent-based architectures, and asynchronous AI workflows that integrate seamlessly with existing platforms.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Beyond the technical side, I value clean architecture, reliability, and maintainability in AI systems. I collaborate closely with product and engineering teams, communicate ideas clearly, and approach problems with a pragmatic, solution-oriented mindset. I enjoy taking AI features from concept to production, ensuring they are not only intelligent, but also stable, observable, and ready to scale.
+              I primarily work with FastAPI-based backends and AWS services including S3, Lambda, RDS, KMS, and EKS, using orchestration tools like Airflow to manage background tasks and data flows.
             </p>
 
             {/* Skills List */}

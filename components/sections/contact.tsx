@@ -50,7 +50,7 @@ export function ContactSection() {
             className="group bg-primary text-primary-foreground hover:bg-primary/90 px-8"
             asChild
           >
-            <a href="mailto:hello@example.com">
+            <a href="mailto:syepesm05@gmail.com">
               <Mail className="mr-2 h-4 w-4" />
               Say Hello
               <Send className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -64,7 +64,7 @@ export function ContactSection() {
             <Mail className="h-6 w-6 text-primary mb-3 mx-auto" />
             <h3 className="text-sm font-medium text-foreground mb-1">Email</h3>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:syepesm05@gmail.com"
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               syepesm05@gmail.com
