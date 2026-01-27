@@ -44,7 +44,7 @@ export function AboutSection() {
             <div className="relative group">
               <div className="relative w-48 h-48 sm:w-72 sm:h-72 rounded-lg overflow-hidden bg-secondary">
                 <Image
-                  src="https://avatars.githubusercontent.com/u/125759356?v=4"
+                  src="/img/foto.png"
                   alt="Sebastián Yepes"
                   fill
                   className="object-cover transition-all duration-500 group-hover:scale-105"

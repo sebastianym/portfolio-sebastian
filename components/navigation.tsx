@@ -93,13 +93,13 @@ export function Navigation() {
               <link.icon className="h-4 w-4" />
             </a>
           ))}
-          <Button
+          {/*<Button
             variant="outline"
             size="sm"
             className="ml-2 border-primary/50 text-primary hover:bg-primary/10 hover:border-primary bg-transparent hover:text-white"
           >
             Resume
-          </Button>
+          </Button>*/}
         </div>
 
         {/* Mobile Menu Button */}
