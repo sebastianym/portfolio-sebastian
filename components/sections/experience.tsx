@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { ExternalLink } from "lucide-react"
 
 interface ExperienceItem {
   title: string
@@ -14,7 +13,7 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     title: "AI Engineer",
-    company: "Construimos AG",
+    company: "Construimos",
     period: "2025 - Present",
     description: [
       "Focused on designing and deploying LLM-powered systems in production, including RAG pipelines, AI agents, and asynchronous AI workflows. Worked with AWS-based architectures, FastAPI backends, vector stores, and observability tools to build scalable and reliable AI solutions.",

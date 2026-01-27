@@ -16,75 +16,45 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "AI Chatbot Platform",
+    title: "Order Management System",
     description:
-      "A production-ready chatbot platform powered by large language models with RAG capabilities. Features include document ingestion, semantic search, and multi-turn conversations with context awareness.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=600&auto=format&fit=crop",
-    technologies: ["Python", "LangChain", "OpenAI", "Pinecone", "FastAPI"],
-    github: "#",
-    demo: "#",
+      "A scalable backend system for handling orders and product inventory using FastAPI, PostgreSQL, and Clean Architecture patterns. Implements APIs for creating, tracking, and managing orders, products, users, and related business logic.",
+    image: "/img/image-order-management-system.png",
+    technologies: ["Python", "FastAPI", "PostgreSQL", "Alembic", "Clean Architecture"],
+    github: "https://github.com/sebastianym/order-management-system",
     featured: true,
   },
   {
-    title: "Computer Vision System",
+    title: "Observability & Logging Platform",
     description:
-      "Real-time object detection and classification system for manufacturing quality control. Achieves 98% accuracy with sub-100ms inference time on edge devices.",
-    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=600&auto=format&fit=crop",
-    technologies: ["PyTorch", "YOLO", "OpenCV", "TensorRT", "Docker"],
-    github: "#",
-    demo: "#",
-    featured: true,
-  },
-  {
-    title: "ML Pipeline Framework",
-    description:
-      "End-to-end machine learning pipeline framework for automated model training, evaluation, and deployment. Supports experiment tracking and model versioning.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
-    technologies: ["Python", "MLflow", "Airflow", "AWS", "Kubernetes"],
-    github: "#",
-    demo: "#",
+      "Demonstration application showcasing advanced observability and logging workflows. Includes intentional failure logs, Prometheus and Grafana integration for metrics dashboards, automated workflow orchestration with n8n, and notification/reporting tools.",
+    image: "https://n8niostorageaccount.blob.core.windows.net/n8nio-strapi-blobs-prod/assets/Home_ITO_Ps_5a5aac3fda.webp",
+    technologies: ["Docker Compose", "Prometheus", "Grafana", "n8n"],
+    github: "https://github.com/sebastianym/n8n-log-analyzer",
     featured: true,
   },
 ]
 
 const otherProjects = [
   {
-    title: "Text Summarization API",
-    description: "REST API for abstractive text summarization using fine-tuned transformer models.",
-    technologies: ["Python", "Hugging Face", "FastAPI"],
-    github: "#",
+    title: "Traceroute Network Analyzer",
+    description: "Web application for executing and visualizing traceroute operations from multiple geographic servers, enabling analysis of network hops, latency, and routing behavior.",
+    technologies: ["TypeScript", "Next.js", "Tailwind CSS", "NextUI"],
+    github: "https://github.com/sebastianym/traceroute-redes2",
   },
   {
-    title: "Sentiment Analyzer",
-    description: "Real-time sentiment analysis tool for social media monitoring and brand tracking.",
-    technologies: ["Python", "BERT", "Streamlit"],
-    github: "#",
+    title: "Custom T-Shirt E-commerce Platform",
+    description: "Modern e-commerce frontend for customizable t-shirt sales, featuring product configuration, shopping cart flow, and integration with a headless CMS backend.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Strapi"],
+    github: "https://github.com/sebastianym/e-commerce-fis",
   },
   {
-    title: "Image Generator",
-    description: "Web interface for generating images using diffusion models with custom prompts.",
-    technologies: ["Python", "Stable Diffusion", "Gradio"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Data Labeling Tool",
-    description: "Collaborative platform for annotating training data with quality control features.",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    github: "#",
-  },
-  {
-    title: "Model Benchmark Suite",
-    description: "Automated benchmarking framework for comparing ML model performance metrics.",
-    technologies: ["Python", "PyTest", "Weights & Biases"],
-    github: "#",
-  },
-  {
-    title: "Voice Assistant",
-    description: "Voice-controlled assistant with speech recognition and natural language understanding.",
-    technologies: ["Python", "Whisper", "GPT-4"],
-    github: "#",
-  },
+    title: "Equipment Loan Management System",
+    description: "Frontend application for managing equipment lending, reservations, and returns, designed for institutional asset control and internal operations.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Strapi"],
+    github: "https://github.com/sebastianym/si-frontend",
+  }
+
 ]
 
 export function ProjectsSection() {
@@ -194,7 +164,7 @@ export function ProjectsSection() {
         <div
           className={`transition-all duration-700 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <h3 className="text-xl font-bold text-foreground text-center mb-12">Other Noteworthy Projects</h3>
+          <h3 className="text-xl font-bold text-foreground text-center mb-12">University projects</h3>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {(showAllProjects ? otherProjects : otherProjects.slice(0, 6)).map((project, index) => (
@@ -215,17 +185,6 @@ export function ProjectsSection() {
                         aria-label="View GitHub repository"
                       >
                         <Github className="h-5 w-5" />
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-primary transition-colors"
-                        aria-label="View live demo"
-                      >
-                        <ExternalLink className="h-5 w-5" />
                       </a>
                     )}
                   </div>

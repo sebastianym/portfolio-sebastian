@@ -74,7 +74,7 @@ export function ContactSection() {
             <MapPin className="h-6 w-6 text-primary mb-3 mx-auto" />
             <h3 className="text-sm font-medium text-foreground mb-1">Location</h3>
             <p className="text-sm text-muted-foreground">
-              Bogotá, Colombia (Remote / Worldwide)
+              (Remote / Worldwide)
             </p>
           </div>
         </div>
