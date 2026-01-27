@@ -5,7 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/sebastianym", label: "GitHub" },
-  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/sebastianyepesmarta/", label: "LinkedIn" },
+  //{ icon: FaLinkedinIn, href: "https://www.linkedin.com/in/sebastianyepesmarta/", label: "LinkedIn" },
   { icon: Mail, href: "mailto:syepesm05@gmail.com", label: "Email" },
 ]
 
